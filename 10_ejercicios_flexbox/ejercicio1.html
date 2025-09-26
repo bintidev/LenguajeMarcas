@@ -10,40 +10,26 @@
 
         <style>
 
-            body {
-                display: block;
-                justify-content: center;
-                align-items: center;
-                margin: 0;
-            }
-
-            #header {
-                width: 100%;
-                margin: 100px 0 100px 0;
-                padding: 50px 0 50px 0;
-                text-align: center;
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                border-top: solid 2px green;
-                border-bottom: solid 2px green;
+            #body {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
 
             #contenedor {
                 display: flex;
                 flex-wrap: nowrap;
-                flex-direction: row;
-                width: 100%;
-                height: 500px;
+                flex-direction: column;
+                width: 200px;
+                height: 100px;
                 border: solid 2px red;
             }
 
             .caja {
+                height: auto;
                 width: auto;
-                padding: 5px;
-                font-family:'Times New Roman', Times, serif;
-                font-size: 50px;
-                font-weight: lighter;
-                text-align: center;
-                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
             }
 
         </style>
@@ -54,22 +40,18 @@
 
     <body>
 
-        <div id="header">
-            <h1>Ejercicio 1</h1>
-        </div>
-
         <div id="contenedor">
 
-            <div class="caja" style="background-color: #1ABC9C;">1</div>
-            <div class="caja" style="background-color: #3498DB;">2</div>
-            <div class="caja" style="background-color: #9B59B6;">3</div>
-            <div class="caja" style="background-color: #34495E;">4</div>
-            <div class="caja" style="background-color: #F1C40F;">5</div>
-            <div class="caja" style="background-color: #E67E22;">6</div>
-            <div class="caja" style="background-color: #E74C3C;">7</div>
-            <div class="caja" style="background-color: #BDC3C7;">8</div>
-            <div class="caja" style="background-color: #2ECC71;">9</div>
-            <div class="caja" style="background-color: #16A085;">10</div>
+            <div class="caja" id="box1">1</div>
+            <div class="caja" id="box2">2</div>
+            <div class="caja" id="box3">3</div>
+            <div class="caja" id="box4">4</div>
+            <div class="caja" id="box5">5</div>
+            <div class="caja" id="box6">6</div>
+            <div class="caja" id="box7">7</div>
+            <div class="caja" id="box8">8</div>
+            <div class="caja" id="box9">9</div>
+            <div class="caja" id="box10">10</div>
 
         </div>
 
