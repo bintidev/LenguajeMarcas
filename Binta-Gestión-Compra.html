@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de la Compra</title>
+
+    <style>
+        body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            width: 500px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 25px;
+            border: solid 5px rgb(0, 0, 0, 0.5);
+            backdrop-filter: blur(10);
+            font-size: 20px;
+            text-align: left;
+        }
+
+        input {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            font-size: 15px;
+            background-color: rgb(0, 0, 0, 0.1);
+        }
+
+        button {
+            width: 150px;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 20px;
+            border: none;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        ticket {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 25px;
+            background-color: #f5f5f5;
+            border: solid 5px rgb(0, 0, 0, 0.5);
+            width: 300px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .lista-articulos {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: left;
+            border-radius: 25px;
+            border: solid 5px rgb(0, 0, 0, 0.5);
+            width: 300px;
+            margin: auto;
+        }
+    </style>
+
+    <script>
+        // Variables globales
+        var articulos = [];
+        var totalCompra = 0;
+
+        // Función alcular el total
+        function calcularTotal() {
+
+            var precio = parseFloat(document.getElementById('precio').value);
+            var cantidad = parseInt(document.getElementById('cant').value);
+            var aPagar = parseFloat(document.getElementById('calcCambio').value);
+
+            // Calcular el importe
+            var importe = precio * cantidad;
+            document.getElementById('importe').value = importe.toFixed(2) + "€";
+
+            // Calculamr el cambio
+            var cambio = aPagar - importe;
+            document.getElementById('cambio').innerHTML = "Cambio: " + cambio.toFixed(2) + "€";
+
+            // Resumen
+            var articulo = document.getElementById('art').value;
+            var pieza = (cantidad == 1) ? "pieza" : "piezas";
+            document.getElementById('resumen').innerHTML = "Has comprado " + cantidad + " " + pieza + " de " + articulo + " por " + precio.toFixed(2) + "€ cada uno.";
+
+            console.log("Compra: " + cantidad + " " + pieza + " de " + articulo + " por " + precio.toFixed(2) + "€ cada uno.");
+        }
+
+        // Función añadir artícuylo
+        function nuevoArticulo() {
+            
+            var articulo = document.getElementById('art'.value);
+            var precio = parseFloat(document.getElementById('precio').value);
+            var cantidad = parseInt(document.getElementById('cant').value);
+            var importe = precio * cantidad;
+
+            // Añadir elemento a la lista
+            var lista = document.getElementById('lista-articulos');
+            var li = document.createElement('li');
+            li.innerHTML = cantidad + " x " + articulo + " a " + precio.toFixed(2) + "€ = " + importe.toFixed(2) + "€";
+            lista.appendChild(li);
+
+            // Sumar precio del artículo introducido a la suma total de la compra
+            totalCompra += importe;
+        }
+
+        // Función para finalizar compra y mostrar tickets
+        function finalizarCompra() {
+
+            document.getElementById('ticket-compra').style.display = "block";
+            document.getElementById('ticket-total').innerHTML = "Total de la compra: " + totalCompra.toFixed(2) + "€";
+
+            // Listar los artículos
+            var ticketLista = document.getElementById('ticket-lista');
+            for (var i = 0; i < articulos.length; i++) {
+                var li = document.createElement('li');
+                li.innerHTML = articulos[i].cantidad + " x " + articulos[i].articulo + " a " + articulos[i].precio.toFixed(2) + "€ = " + articulos[i].importe.toFixed(2) + "€";
+                ticketLista.appendChild(li);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Gestión de la Compra</h1>
+
+    <form>
+        <label for="art">Nombre del Artículo </label>
+        <input type="text" id="art">
+
+        <br>
+
+        <label for="precio">Precio </label>
+        <input type="text" id="precio">
+
+        <br>
+
+        <label for="cant">Cantidad </label>
+        <input type="text" id="cant">
+
+        <br>
+
+        <label for="calcCambio">Pago </label>
+        <input type="text" id="calcCambio">
+
+        <br>
+
+        <input type="text" id="importe" disabled>
+
+        <br><br>
+
+        <button type="button" onclick="calcularTotal()">Aceptar</button>
+        <button type="button" onclick="nuevoArticulo()">Nuevo Artículo</button>
+
+        <br>
+
+        <p id="cambio"></p>
+        <p id="resumen"></p>
+    </form>
+
+    <div class="lista-articulos">
+        <h3>Artículos Comprados:</h3>
+        <ul id="lista-articulos"></ul>
+    </div>
+
+    <div class="ticket" id="ticket-compra" style="display: none;">
+        <h2>Ticket de Compra</h2>
+        <p id="ticket-total"></p>
+        <ul id="ticket-lista"></ul>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Integrando Javascript</title>
+
+        <style>
+
+            body {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 50px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: rosybrown;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            button {
+                margin: 0 40px 0 40px;
+                padding: 10px;
+                font-size: 20px;
+                color: white;
+                border-radius: 5px;
+                border: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <h1>Mi Ciudad</h1>
+
+        <button style="background-color: burlywood;" type="button" onclick="ciudadDiaNoche(0)">DÍA</button>
+        <button style="background-color: darkblue;" type="button" onclick="ciudadDiaNoche(1)">NOCHE</button>
+
+        <script>
+
+            function ciudadDiaNoche(dn) {
+                var pic;
+                var txt;
+                if(dn == 0) {
+                    txt = "Esta es mi ciudad de día ;)";
+                    pic = "ciudad_dia.jpg";
+                } else {
+                    txt = "Esta es mi ciudad de noche :D";
+                    pic = "ciudad_noche.jpg";
+                }
+                document.getElementById('ciudad').src = pic;
+                document.getElementById('msj').innerHTML = txt;
+            }
+
+        </script>
+
+        <p id="msj"></p>
+        <img id="ciudad" src="" width="500" height="310">
+
+    </body>
+</html>

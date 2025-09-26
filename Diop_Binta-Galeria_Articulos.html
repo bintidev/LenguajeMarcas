@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Decoración de Hogar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1200px;
+      padding: 20px;
+    }
+
+    .photo {
+      flex: 1 1 calc(33% - 20px); /* Flexibilidad de las fotos, con márgenes entre ellas */
+      max-width: 300px;
+      min-width: 280px;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 4px solid #f1f1f1;
+    }
+
+    .photo .info {
+      padding: 10px;
+    }
+
+    .photo .info h3 {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .photo .info p {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .photo .info .price {
+      font-size: 1.1em;
+      color: #e63946;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+      .photo {
+        flex: 1 1 calc(50% - 20px); /* Dos fotos por fila en pantallas más pequeñas */
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .photo {
+        flex: 1 1 100%; /* Una foto por fila en pantallas muy pequeñas */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/1696474/pexels-photo-1696474.jpeg" alt="Mueble Moderno">
+      <div class="info">
+        <h3>Mueble Moderno</h3>
+        <p>Un elegante mueble de madera para dar un toque contemporáneo a tu sala.</p>
+        <p class="price">€250</p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/3277175/pexels-photo-3277175.jpeg" alt="Alfombra Decorativa">
+      <div class="info">
+        <h3>Alfombra Decorativa</h3>
+        <p>Alfombra de diseño minimalista para complementar cualquier estilo de decoración.</p>
+        <p class="price">€85</p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/3785769/pexels-photo-3785769.jpeg" alt="Lámpara de Mesa">
+      <div class="info">
+        <h3>Lámpara de Mesa</h3>
+        <p>Lámpara de mesa con base metálica para iluminar tu hogar con estilo.</p>
+        <p class="price">€55</p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/1683492/pexels-photo-1683492.jpeg" alt="Cuadro Decorativo">
+      <div class="info">
+        <h3>Cuadro Decorativo</h3>
+        <p>Cuadro moderno para añadir un toque artístico a tu sala o comedor.</p>
+        <p class="price">€120</p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/3661785/pexels-photo-3661785.jpeg" alt="Espejo Decorativo">
+      <div class="info">
+        <h3>Espejo Decorativo</h3>
+        <p>Espejo elegante con marco metálico, ideal para cualquier habitación.</p>
+        <p class="price">€150</p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/1962085/pexels-photo-1962085.jpeg" alt="Plantas de Interior">
+      <div class="info">
+        <h3>Plantas de Interior</h3>
+        <p>Plantas ideales para darle vida y frescura a tu espacio interior.</p>
+        <p class="price">€35</p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/2642451/pexels-photo-2642451.jpeg" alt="Estantería Moderna">
+      <div class="info">
+        <h3>Estantería Moderna</h3>
+        <p>Estantería elegante para organizar y exhibir tus libros y objetos decorativos.</p>
+        <p class="price">€200</p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/3743585/pexels-photo-3743585.jpeg" alt="Cómoda de Madera">
+      <div class="info">
+        <h3>Cómoda de Madera</h3>
+        <p>Cómoda de madera maciza con un diseño sencillo pero funcional.</p>
+        <p class="price">€300</p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="https://images.pexels.com/photos/2350427/pexels-photo-2350427.jpeg" alt="Vajilla Decorativa">
+      <div class="info">
+        <h3>Vajilla Decorativa</h3>
+        <p>Juego de vajilla elegante, perfecto para una comida especial o diaria.</p>
+        <p class="price">€75</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

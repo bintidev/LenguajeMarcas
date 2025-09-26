@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+            body {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+            }
+            
+            input {
+                margin: 10px 5px 20px 5px;
+                width: 300px;
+                padding: 5px;
+                border: solid 0.5px black;
+                border-radius: 10px;
+            }
+
+        </style>
+
+        <script>
+
+            const listapersonas = ["Pepito", "Mariola", "Roberto"];
+
+            function atenderCliente() {
+                var turnoDe = listapersonas[0];
+                
+                document.getElementById('turno').value = turnoDe;
+                document.getElementById('turno').style.fontSize = "50px";
+                document.getElementById('turno').style.color = "red";
+
+                listapersonas.shift();
+            }
+
+            function aniadirCliente() {
+                var cliente = document.getElementById('nuevocliente').value;
+                listapersonas.push(cliente);
+                document.getElementById('nuevocliente').value = "";
+            }
+
+            function marcarAtendido() {
+                var atendiendo = listapersonas[0];
+                var turno = document.getElementById('turno');
+
+                turno.style.color = "green";
+                turno.style.fontStyle = "italic";
+            }
+
+            function finalizar() {
+                
+            }
+
+        </script>
+
+        <script src="imprimelista.js"></script>
+    </head>
+    <body>
+
+            <form>
+
+                <input type="text" id="turno" disabled> <br>
+                <input type="text" id="nuevocliente" onchange="mostrarArrayEnLista(listapersonas, 'lista')"> <br>
+
+                <button type="button" onclick="atenderCliente()">Atender</button>
+                <button type="button" onclick="aniadirCliente()">Añadir</button>
+                <button type="button" onclick="marcarAtendido()">Atendido</button>
+                <button type="button" onclick="mostrarArrayEnLista(listapersonas, 'lista')">Finalizar</button>
+
+            </form>
+
+
+            <ul id="lista"></ul>
+
+    </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE  html5>
+
+<html>
+
+    <head>
+
+        <title>Deportes de Invierno | Ejercicio con Secciones</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Fonts -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+
+        <style>
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            body::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            #encabezado {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 10%;
+                background-color: #6baed6;
+                margin: -5px;
+                padding-top: 5px;
+                text-align: center;
+                font-size: 40px;
+                font-family: 'Quicksand', sans-serif;
+                color: white;
+            }
+
+            #nav {
+                float: left;
+                height: 101cm;
+                width: 15%;
+                margin: 5px 5px 0 0;
+                padding: 30px 70px 0 0;
+                background-color: #eff3ff;
+                font-family: 'Nunito', italic;
+            }
+
+            #contenido {
+                padding-left: 40px;
+            }
+
+            main {
+                float: left;
+                width: 45%;
+                margin: 20px 0 0 100px;
+            }
+
+            footer {
+                clear: both;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 100px;
+                padding-top: 150px;
+                background-color: #5fa8d7;
+                color: white;
+            }
+
+            @media (max-width: 600px) {
+                nav, article {
+                width: 100%;
+                height: auto;
+                }
+            }
+
+            #nav ol {
+                list-style-type: upper-roman;
+                color: #6dc1e2;
+                
+            }
+
+            #nav li {
+                margin-bottom: -15px;
+            }
+
+            a {
+                color: #3776f5;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #0aa2d0;
+                text-decoration: underline dashed 0.5px;
+            }
+
+            a:visited {
+                color: #0c3eb4;
+            }
+
+            section {
+                padding-bottom: 30px;
+            }
+
+            section h1 {
+                font-size: 25px;
+            }
+
+            h1 {
+                font-family: 'Rethink Sans', courier;
+                font-size: 30px;
+            }
+
+            p {
+                margin-top: -20px;
+                font-family: 'Nunito', sans-serif;
+                font-size: 15px;
+            }
+
+            img {
+                width: 500px;
+                border-radius: 0 30px 30px 30px;
+                padding-top: 12px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header id="encabezado">
+            <h1 style="font-size: 40px;">Deportes de Invierno ❄️</h1>
+        </header>
+
+        <nav id="nav">
+            <div id="contenido">
+                <a href="#individuales">Deportes Individuales</a>
+                <ol>
+                    <li><a href="#patinaje">Patinaje Artístico</a></li> <br>
+                    <li><a href="#motonieve">Motonieve</a></li> <br>
+                    <li><a href="#snowboard">Snowboard</a></li> <br>
+                    <li><a href="#saltoesqui">Salto de Esquí</a></li>
+                </ol>
+
+                <br>
+                <br>
+
+                <a href="#colectivos">Deportes Colectivos</a>
+                <ol>
+                    <li><a href="#bobsled">Bobsleigh</a></li> <br>
+                    <li><a href="#curling">Curling</a></li> <br>
+                    <li><a href="#hockey">Hockey</a></li>
+                </ol>
+            </div>
+        </nav>
+
+        <main>
+
+            <article>
+                <article id="individuales">
+
+                    <header>
+                        <h1>Deportes Individuales</h1>
+                    </header>
+
+                    <section id="patinaje">
+                        <h1>Patinaje Artístico ⛸️</h1>
+                        <p>
+                            El patinaje artístico sobre hielo consiste en interpretar una
+                            pieza musical patinando sobre una pista de hielo y realizando piruetas,
+                            giros, saltos y acrobacias. El patinaje artístico surgió en el siglo XIX
+                            y experimentó varios desarrollos técnicos y estilísticos hasta alcanzar
+                            su forma actual
+                        </p>
+
+                        <img src="https://blog.marti.mx/wp-content/uploads/2023/08/patinaje_hielo_content-jpg.webp" alt="patinaje sobre hielo">
+                    </section>
+
+                    <section id="motonieve">
+                        <h1>Motonieve 🏍️❄️</h1>
+                        <p>
+                            En países fríos como Finlandia, Noruega, Suecia o Canadá, utilizan este
+                            vehículo para sus desplazamientos. Sin embargo en España ha proliferado
+                            para la competición o para practicar deporte. Su funcionamiento es muy
+                            parecido al de una moto convencional o acuática. Se diferencia porque en
+                            vez de ruedas, lleva patines. Suelen ser biplazas y su conducción da una
+                            gran sensación de libertad.
+                        </p>
+
+                        <img src="https://stdispongostdr01.blob.core.windows.net/ntv-real-img/Actividades/861/861_7114.png" alt="motonieve">
+                    </section>
+
+                    <section id="snowboard">
+                        <h1>Snowboard 🏂</h1>
+                        <p>
+                            El snow es un deporte de deslizamiento que tiene muchas similitudes con el
+                            surf y el skate: en todos ellos se desliza de lado. Del surf, ha tomado la
+                            elegancia y la fluidez de los movimientos y del skate la ambición por realizar
+                            saltos y trucos, así como grindar módulos y barandillas. El material básico
+                            necesario para practicar snowboard son la tabla, unas botas y las fijaciones.
+                        </p>
+
+                        <img src="https://estaticos-cdn.prensaiberica.es/clip/2ccfdff2-2253-4738-b141-b7e8ad0454f0_alta-libre-aspect-ratio_default_0.jpg" alt="snowboarding">
+                    </section>
+
+                    <section id="saltoesqui">
+                        <h1>Salto de Esquí ⛷️</h1>
+                        <p>
+                            El salto de esquí es un deporte de invierno que consiste en deslizarse con esquís
+                            por un trampolín y conseguir así un salto bien ejecutado a la mayor distancia posible.
+                            La longitud del salto y otros factores como la posición, control y aterrizaje influyen
+                            en la puntuación final.
+                        </p>
+
+                        <img src="https://okdiario.com/img/2022/12/30/saltos-de-esqui-ano-nuevo-2023-a-que-hora-es-como-verlo-en-directo-y-donde-se-celebra-655x368.jpg" alt="snowboarding">
+                    </section>
+
+                </article>
+            </article>
+
+            <article>
+                <article id="colectivos" style="margin-top: 1.5cm;">
+
+                    <header>
+                        <h1>Deportes Colectivos</h1>
+                    </header>
+                    
+                    <section id="bobsled">
+                        <h1>Bobsleigh 🛷</h1>
+                        <p>
+                            El bobsleigh es uno de los deportes más representativos de los Juegos Olímpicos de
+                            Invierno. Nacido directamente como deporte a diferencia de otras modalidades invernales,
+                            se trata de una carrera contra reloj de trineos encajonados en una pista de hielo, sobre
+                            la que se alcanzan velocidades superiores a los 100 kilómetros por hora.
+                        </p>
+
+                        <img src="https://loopnewslive.blob.core.windows.net/liveimage/sites/default/files/2022-02/c372902ceabadcdfe613515156cb4aedjamaicas_4-man_bosbled_team_at_beijing_winter_olympics_2022.jpg" alt="bobsleigh">
+                    </section>
+
+                    <section id="curling">
+                        <h1>Curling 🥌</h1>
+                        <p>
+                            El curling es un deporte que se practica sobre una estrecha pista de hielo. Se enfrentan dos
+                            equipos de 4 jugadores que compiten entre sí en una misma pista, debiendo lanzar 8 piedras
+                            de granito por ronda.  El objetivo principal del juego consiste en lanzar las piedras hacia la
+                            casa para dejarlas dentro de ella y lo más cerca posible del tee (centro de la diana). Al final
+                            de cada entrada o end, el equipo que tenga la piedra más cercana al tee (y dentro de la casa),
+                            recibe un punto. Además, recibirá un punto más por cada piedra que esté más cerca del tee que
+                            todas las piedras del otro equipo. 
+                        </p>
+
+                        <img src="https://www.ctvnews.ca/content/dam/ctvnews/en/images/2024/3/24/rachel-homan-1-6820428-1711322021745.jpg" alt="curling">
+                    </section>
+
+                    <section id="hockey">
+                        <h1>Hockey 🏒</h1>
+                        <p>
+                            El hockey sobre hielo es un juego de equipo rápido que se juega sobre hielo. Cada deportista
+                            lleva patines y un palo de hockey, y el objetivo del juego es meter el disco en la portería
+                            contraria golpeándolo con el palo. El equipo que marca más goles al final del partido será el
+                            ganador. Las entradas con el cuerpo están permitidas siempre que se dirijan al líder - sin
+                            embargo, esto no se aplica al hockey juvenil.
+                        </p>
+
+                        <img src="https://images.unsplash.com/photo-1583713428041-0e7b18c3fdfb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="curling">
+                    </section>
+
+                </article>
+            </article>
+
+        </main>
+
+        <footer>
+
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">
+                Deportes de Invierno</span> by <span property="cc:attributionName">Binta Diop</span> is licensed under 
+                <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" 
+                style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" 
+                src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" 
+                src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+            body {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            img {
+                margin-top: -10px;
+            }
+
+            button {
+                background-color: white;
+                padding: 10px;
+                border: solid 1px black;
+                border-radius: 5px;
+                font-size: 20px;
+            }
+
+        </style>
+
+        <script>
+
+            // lanzar un dado
+            function lanzarDado() {
+                var cara = Math.floor((Math.random() * 6) + 1);
+
+                switch (cara) {
+                    case 1:
+                        document.getElementById('resultado').innerHTML = "Cara 1";
+                        document.getElementById('dado').src = "d1.JPG";
+                        break;
+                    case 2:
+                        document.getElementById('resultado').innerHTML = "Cara 2";
+                        document.getElementById('dado').src = "d2.JPG";
+                        break;
+                    case 3:
+                        document.getElementById('resultado').innerHTML = "Cara 3";
+                        document.getElementById('dado').src = "d3.JPG";
+                        break;
+                    case 4:
+                        document.getElementById('resultado').innerHTML = "Cara 4";
+                        document.getElementById('dado').src = "d4.JPG";
+                        break;
+                    case 5:
+                        document.getElementById('resultado').innerHTML = "Cara 5";
+                        document.getElementById('dado').src = "d5.JPG";
+                        break;
+                    case 6:
+                        document.getElementById('resultado').innerHTML = "Cara 6";
+                        document.getElementById('dado').src = "d6.JPG";
+                        break;
+                }
+
+                return cara;
+            }
+
+            // cambiar aspecto
+            function aspecto() {
+                // aumentar y disminuir tamaño en 10px aleatoriamente
+                var tamanio = Math.floor((10-Math.random()) * 10);
+                var r = Math.ceil(Math.random()*255);
+                var g = Math.ceil(Math.random()*255);
+                var b = Math.ceil(Math.random()*255);
+
+                var txt = document.getElementById('resultado');
+                var fondo = document.getElementById('fondo');
+
+                txt.style.fontSize = tamanio + "px"
+                fondo.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            }
+
+            // lanzar dos dados
+            function lanzarDosDados() {
+                var dado1 = lanzarDado();
+                var dado2 = lanzarDado();
+                var total = dado1 + dado2;
+
+                switch (total) {
+                    case 2:
+                        document.getElementById('resultado').innerHTML = "Total: 2";
+                        document.getElementById('dado').src = "d1.JPG";
+                        document.getElementById('dado2').src = "d1.JPG";
+                        break;
+                    case 3:
+                        document.getElementById('resultado').innerHTML = "Total: 3";
+                        document.getElementById('dado').src = "d2.JPG";
+                        document.getElementById('dado2').src = "d1.JPG";
+                        break;
+                    case 4:
+                        document.getElementById('resultado').innerHTML = "Total: 4";
+                        document.getElementById('dado').src = "d3.JPG";
+                        document.getElementById('dado2').src = "d1.JPG";
+                        break;
+                    case 5:
+                        document.getElementById('resultado').innerHTML = "Total: 5";
+                        document.getElementById('dado').src = "d2.JPG";
+                        document.getElementById('dado2').src = "d3.JPG";
+                        break;
+                    case 6:
+                        document.getElementById('resultado').innerHTML = "Total: 6";
+                        document.getElementById('dado').src = "d3.JPG";
+                        document.getElementById('dado2').src = "d3.JPG";
+                        break;
+                    case 7:
+                        document.getElementById('resultado').innerHTML = "Total: 7";
+                        document.getElementById('dado').src = "d6.JPG";
+                        document.getElementById('dado2').src = "d1.JPG";
+                        break;
+                    case 8:
+                        document.getElementById('resultado').innerHTML = "Total: 8";
+                        document.getElementById('dado').src = "d6.JPG";
+                        document.getElementById('dado2').src = "d2.JPG";
+                        break;
+                    case 9:
+                        document.getElementById('resultado').innerHTML = "Total: 9";
+                        document.getElementById('dado').src = "d6.JPG";
+                        document.getElementById('dado2').src = "d3.JPG";
+                        break;
+                    case 10:
+                        document.getElementById('resultado').innerHTML = "Total : 10";
+                        document.getElementById('dado').src = "d5.JPG";
+                        document.getElementById('dado2').src = "d5.JPG";
+                        break;
+                    case 11:
+                        document.getElementById('resultado').innerHTML = "Total: 11";
+                        document.getElementById('dado').src = "d6.JPG";
+                        document.getElementById('dado2').src = "d5.JPG";
+                        break;
+                    case 12:
+                        document.getElementById('resultado').innerHTML = "Total: 12";
+                        document.getElementById('dado').src = "d6.JPG";
+                        document.getElementById('dado2').src = "d6.JPG";
+                        break;
+                }                
+            }
+
+        </script>
+    </head>
+
+
+    <body id="fondo">
+        
+        <button type="button" onclick="lanzarDado()">Lanzar Dado</button> <br><br>
+        <button type="button" onclick="lanzarDosDados()">Lanzar Dos Dados</button>
+
+        <p id="resultado"></p>
+        <img id="dado" src="" style="width: 100px;">
+        <img id="dado2" src="" style="width: 100px;">
+
+        <br>
+        <br>
+
+        <button type="button" onclick="aspecto()">Cambiar Estilo</button>
+
+    </body>
+</html>

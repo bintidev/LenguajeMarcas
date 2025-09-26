@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usuario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="clientes.xsd">
+
+    <cliente>
+        <nombre>Binta</nombre>
+        <saldo>1992.56</saldo>
+        <compras>0</compras>
+        <email>bd90962@gmail.com</email>
+        <telefono>643467898</telefono>
+        <iban>ES91 2100 1234 56 0078901234</iban>
+    </cliente>
+    
+</usuario>

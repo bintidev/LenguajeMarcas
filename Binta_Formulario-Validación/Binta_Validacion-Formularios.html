@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Formularios</title>
+
+    <style>
+        body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        // Función para validar el formulario
+        function comprobar(event) {
+            // Prevenir que el formulario se envíe
+            event.preventDefault();
+
+            // Realizamos las validaciones de los campos
+            var nombreValido = esNombreValido();
+            var telefonoValido = esTelefonoValido();
+            var emailValido = esEmailValido();
+            var dniValido = esDniValido();
+
+            // Si todas las validaciones son correctas, enviar el formulario
+            if (nombreValido && telefonoValido && emailValido && dniValido) {
+                alert("Formulario enviado correctamente");
+                // Aquí podrías usar `form.submit()` si deseas enviar el formulario manualmente después de la validación.
+            }
+        }
+
+        // Validación del campo nombre
+        function esNombreValido() {
+            var entradaNombre = document.getElementById('nombre').value;
+
+            if (entradaNombre.includes(" ")) {
+                document.getElementById('msjNombreValido').style.color = "#39ff14";
+                document.getElementById('msjNombreValido').innerHTML = "El nombre introducido es válido";
+                return true;
+            } else {
+                document.getElementById('msjNombreValido').style.color = "#ff0000";
+                document.getElementById('msjNombreValido').innerHTML = "El nombre debe contener al menos un espacio";
+                return false;
+            }
+        }
+
+        // Validación del campo número de teléfono
+        function esTelefonoValido() {
+            var entradaNumTel = document.getElementById('numTel').value;
+
+            if (entradaNumTel.length == 9 && !isNaN(entradaNumTel)) {
+                document.getElementById('msjNumTelValido').style.color = "#39ff14";
+                document.getElementById('msjNumTelValido').innerHTML = "El número de teléfono es válido";
+                return true;
+            } else {
+                document.getElementById('msjNumTelValido').style.color = "#ff0000";
+                document.getElementById('msjNumTelValido').innerHTML = "El número de teléfono debe tener 9 dígitos";
+                return false;
+            }
+        }
+
+        // Validación del campo correo electrónico
+        function esEmailValido() {
+            var entradaEmail = document.getElementById('correo').value;
+
+            if (entradaEmail.length >= 8 && entradaEmail.includes("@") && entradaEmail.includes(".")) {
+                document.getElementById('msjEmailValido').style.color = "#39ff14";
+                document.getElementById('msjEmailValido').innerHTML = "El correo electrónico es válido";
+                return true;
+            } else {
+                document.getElementById('msjEmailValido').style.color = "#ff0000";
+                document.getElementById('msjEmailValido').innerHTML = "El correo electrónico no es válido";
+                return false;
+            }
+        }
+
+        // Validación del campo DNI
+        function esDniValido() {
+            var entradaDni = document.getElementById('dni').value;
+            var entradaLetra = document.getElementById('letra_dni').value.toUpperCase();
+            var letrasDni = "TRWAGMYFPDXBNJZSQVHLCKE";  // Letras correspondientes al DNI
+
+            if (entradaDni.length == 8 && !isNaN(entradaDni) && letrasDni.charAt(entradaDni % 23) === entradaLetra) {
+                document.getElementById('msjDniValido').style.color = "#39ff14";
+                document.getElementById('msjDniValido').innerHTML = "El DNI es válido";
+                return true;
+            } else {
+                document.getElementById('msjDniValido').style.color = "#ff0000";
+                document.getElementById('msjDniValido').innerHTML = "El DNI y la letra no son válidos";
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form onsubmit="comprobar(event)">
+        <h1>Formulario de Datos Personales</h1>
+
+        <h2>Validación de nombre completo</h2>
+        <input type="text" id="nombre" placeholder="Introduzca tu nombre y apellido/s">
+        <p id="msjNombreValido"></p>
+
+        <h2>Validación del número de teléfono</h2>
+        <input type="text" id="numTel" placeholder="Introduzca su número de teléfono">
+        <p id="msjNumTelValido"></p>
+
+        <h2>Validación de la dirección de correo</h2>
+        <input type="text" id="correo" placeholder="Introduzca una dirección email">
+        <p id="msjEmailValido"></p>
+
+        <h2>Validación del DNI</h2>
+        <input type="text" id="dni" placeholder="Introduzca su DNI (sin letra)">
+        <input type="text" id="letra_dni" maxlength="1" placeholder="Introduzca la letra del DNI">
+        <p id="msjDniValido"></p>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+    </form>
+
+</body>
+
+</html>

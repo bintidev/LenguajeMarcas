@@ -1,0 +1,260 @@
+<!DOCTYPE html5>
+
+<html>
+
+
+
+    <head>
+
+        <title>Café de Versos</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!--Google Fonts: Thasadith (h2), Italiana (h1), Jost (p)-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Italiana&family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Reenie+Beanie&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="favicon.png">
+
+        <style>
+
+            html{
+                scroll-behavior: smooth;
+            }
+
+            body {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-image: url("https://img.freepik.com/vector-premium/patron-fondo-claro-transparente-granos-cafe-granos-cafe-linea_373783-246.jpg?w=1800");
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            #intro {
+                width: 47em;
+                padding: 15px 100px 25px 100px;
+                margin-bottom: -65px;
+                background-color: #F8F0E5;
+                box-shadow: 0 0 12px #74512D;
+                z-index: 0;
+            }
+
+            #banner {
+                height: 30em;
+                width: 59.5em;
+                background-position: center;
+                background-repeat: no-repeat;
+                box-shadow: 0 -7px 12px #74512D;
+                z-index: 1;
+            }
+
+            #logo {
+                position: fixed;
+                top: 25%;
+                left: 89%;
+                z-index: 2;
+            }
+
+            #nombre {
+                height: 150px;
+                width: 100%;
+                border-bottom: dotted 2px #543310;
+            }
+
+            h1 {
+                font-family: "Italiana", sans-serif;
+                font-size: 70px;
+                font-weight: bolder;
+                font-style: italic;
+                color: #543310;
+            }
+
+            h2 {
+                font-family: "Thasadith", sans-serif;
+                font-size: 40px;
+                font-weight: lighter;
+                margin-top: -50px;
+                color: #74512D;
+            }
+
+            .span {
+                font-style: italic;
+                color: #6A9C89;
+            }
+
+            #descripcion {
+                font-family: "Jost", sans-serif;
+                font-weight: 10px;
+                font-size: 20px;
+                padding-top: 20px;
+                padding-bottom: 30px;
+            }
+
+            #descripcion p {
+                padding-bottom: 20px;
+            }
+
+            #imagenes-cafe {
+                position: relative;
+                margin: auto;
+            }
+
+            #pie {
+                text-align: center;
+                width: 59.5em;
+                padding-bottom: 35px;
+                border-radius: 30px 30px 0 0;
+                background-color: #6A9C89;
+                box-shadow: 0 10px 12px #74512D;
+            }
+
+            #horario {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 70px;
+                column-rule: inset thick #74512D;
+            }
+
+            h4 {
+                color: #F8F0E5;
+                font-family: "Italiana", sans-serif;
+                font-size: 35px;
+                font-weight: lighter;
+                margin-bottom: 10px;
+                padding-top: 35px;
+            }
+
+            h4 span {
+                font-size: 50px;
+            }
+
+            .horario {
+                color: #F8F0E5;
+                font-family: "Jost", sans-serif;
+                font-size: 20px;
+                margin-bottom: -10px;
+            }
+
+            .horario span {
+                font-style: italic;
+                font-weight: bold;
+                color: #543310;
+            }
+
+            #localizacion {
+                color: #F8F0E5;
+                font-family: "Italiana", sans-serif;
+                font-size: 50px;
+            }
+
+            #chevron {
+                position: absolute;
+                left: 88%;
+                top: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                background-color: #8a7865c4;
+                border-radius: 50%;
+                transition: background ease-in .3s;
+                transition: .3s ease;
+            }
+
+            #chevron:hover {
+                background: #817466;
+                transform: scale(1.2);
+            }
+
+        </style>
+
+    </head>
+
+
+
+    <body>
+
+        <div id="cabecera">
+            <img src="logo.png" id="logo">
+            <img src="banner.jpg"
+            id="banner">
+        </div>
+
+        <div id="intro">
+    
+            <div id="nombre">
+                <h1>Café de versos</h1> 
+                <h2>La felicidad comienza con el café y los libros</h2>
+            </div>
+
+            
+            <div id="descripcion">
+
+                <p><span class="span"><b>Café de Versos</b></span> es el espacio perfecto para darte un descanso del ajetreo
+                    <br> de tu día a día. Aquí puedes disfutar de nuestros <span class="span"><b>desayunos caseros</b></span>,
+                    <br> recién salidos de la cocina, directos a tu rinconcito de felicidad.
+                    <br>
+                    <br> Para aquellos que disfrutan de una buena <span class="span"><b>lectura mañanera</b></span>, les tenemos una gran
+                    <br> cantidad de libros, desde los clásicos infantiles, a las novelas más intrigantes.
+                    <br> Con un poco de suerte, encuentras uno que resuene con tu estado de ánimo
+                </p>
+
+                <div id="imagenes-cafe">
+                    <img src="img1.jpg"
+                    style="width: 360px; border: solid 5px #6A9C89;">
+
+                    <img src="img2.jpg"
+                    style="width: 361px; border: solid 5px #6A9C89;">
+                </div>
+    
+            </div>
+
+            </div>
+        
+
+        <div id="pie">
+
+            <h4>•◦✿────────── <span>&ensp;Horario&ensp;</span> ──────────✿◦•</h4>
+
+            <div id="horario">
+
+                <div class="horario">
+                    <span><p>Lunes a viernes</p></span>
+                    <p>8:00 - 18:30</p>
+                </div>
+
+                <div class="horario">
+                    <span><p>Fines de Semana</p></span>
+                    <p>CERRADO</p>
+                </div> 
+
+                <div class="horario">
+                    <span><p>Festivos</p></span>
+                    <p>9:00 - 17:30</p>
+                </div>
+
+            </div>
+
+            <div id="localizacion">
+                <p>¡Encuéntranos aquí!</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d800.8824820615766!2d-4.532794034246137!3d36.58954412490142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1729699833015!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div id="chevron">
+                <a href="productos.html" target="_blank"> <img src="bxs-chevron-right.svg" title="Lista de productos"> </a>
+            </div>
+            
+        </div>
+
+
+    </body>
+
+
+
+</html>

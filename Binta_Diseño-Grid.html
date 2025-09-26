@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portada Sitio Web con Grid</title>
+        
+        <style>
+            
+            body {
+                background-color: #2b2d42;
+            }
+
+            .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas:
+                "header header"
+                "content1 content2";
+            gap: 20px;
+            height: 100vh;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .header {
+            grid-area: header;
+            background-color: #d90429; 
+            color: #EDF2F4;
+            text-align: center;
+            padding: 20px;
+            }
+
+            .content1 {
+            grid-area: content1;
+            background-color: #8D99AE;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            }
+
+            .content2 {
+            grid-area: content2;
+            background-color: #8D99AE;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            }
+
+            .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            }
+
+            .content h2 {
+            color: #2B2D42;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            }
+
+            .content p {
+            color: #2B2D42;
+            font-size: 1rem;
+            }
+
+            .button {
+            background-color: #EF233C;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            }
+
+            .button:hover {
+            background-color: #D90429;
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Bienvenidos a X Sitio Web</h1>
+            <p>Portada de Ejemplo de un Sitio Web Usando Grid Layout</p>
+        </header>
+
+        <div class="content1">
+            <h2>Bloque 1</h2>
+            <img src="https://www.gabinetedelafamilia.gob.do/images/300x300.png" alt="Imagen de ejemplo">
+            <p>Este es el primer bloque de contenido.</p>
+            <a href="#" class="button">Leer más</a>
+        </div>
+
+        <div class="content2">
+            <h2>Bloque 2</h2>
+            <img src="https://www.gabinetedelafamilia.gob.do/images/300x300.png" alt="Imagen de ejemplo">
+            <p>Este es el segundo bloque de contenido.</p>
+            <a href="#" class="button">Leer más</a>
+        </div>
+    </div>
+
+    </body>
+</html>
