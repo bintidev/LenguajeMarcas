@@ -46,7 +46,7 @@
             text-align: center;
         }
 
-        ticket {
+        .ticket {
             margin-top: 20px;
             padding: 15px;
             border-radius: 25px;
@@ -73,7 +73,7 @@
         var articulos = [];
         var totalCompra = 0;
 
-        // Función alcular el total
+        // Función calcular el total
         function calcularTotal() {
 
             var precio = parseFloat(document.getElementById('precio').value);
@@ -84,7 +84,7 @@
             var importe = precio * cantidad;
             document.getElementById('importe').value = importe.toFixed(2) + "€";
 
-            // Calculamr el cambio
+            // Calcular el cambio
             var cambio = aPagar - importe;
             document.getElementById('cambio').innerHTML = "Cambio: " + cambio.toFixed(2) + "€";
 
@@ -96,10 +96,10 @@
             console.log("Compra: " + cantidad + " " + pieza + " de " + articulo + " por " + precio.toFixed(2) + "€ cada uno.");
         }
 
-        // Función añadir artícuylo
+        // Función añadir artículo
         function nuevoArticulo() {
             
-            var articulo = document.getElementById('art'.value);
+            var articulo = document.getElementById('art').value;
             var precio = parseFloat(document.getElementById('precio').value);
             var cantidad = parseInt(document.getElementById('cant').value);
             var importe = precio * cantidad;

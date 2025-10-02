@@ -1,0 +1,38 @@
+<!--<!DOCTYPE pizzas[
+
+<!ELEMENT pizzas (pizza+)>
+<!ELEMENT pizza (ingrediente+)>
+<!ELEMENT ingrediente EMPTY>
+
+<!ATTLIST pizza nombre CDATA #REQUIRED>
+<!ATTLIST pizza precio CDATA #REQUIRED>
+<!ATTLIST ingrediente nombre NMTOKENS #REQUIRED>
+
+]>-->
+
+<!DOCTYPE pizzas SYSTEM "ventas.dtd">
+
+<pizzas>
+
+    <pizza nombre="Barbacoa" precio="8">
+        <ingrediente nombre="Salsa Barbacoa" />
+        <ingrediente nombre="Mozzarella" />
+        <ingrediente nombre="Pollo" />
+        <ingrediente nombre="Bacon" />
+        <ingrediente nombre="Ternera" />
+    </pizza>
+
+    <pizza nombre="Margarita" precio="6">
+        <ingrediente nombre="Tomate" />
+        <ingrediente nombre="Jamón" />
+        <ingrediente nombre="Queso" />
+    </pizza>
+
+    <pizza nombre="4 Quesos" precio="3">
+        <ingrediente nombre="Gouda" />
+        <ingrediente nombre="Queso Azul" />
+        <ingrediente nombre="Emmental" />
+        <ingrediente nombre="Mozzarela" />
+    </pizza>
+
+</pizzas>

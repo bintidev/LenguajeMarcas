@@ -1,0 +1,9 @@
+<!ELEMENT clientes (cliente+)>
+
+<!ELEMENT cliente (nombre, edad, correo)>
+
+<!ELEMENT nombre (#PCDATA)>
+
+<!ELEMENT edad (#PCDATA)>
+
+<!ELEMENT correo (#PCDATA)>
