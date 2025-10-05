@@ -3,125 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicios Básicos</title>
+        <link rel="stylesheet" href="./assets/styles/basicos-style.css">
+        <script type="text/Javascript" src="./assets/js/basicos.js"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        <title>Ejercicios Básicos</title>
-        <style>
-
-            /*html {
-                
-            }*/
-
-            body {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-image: url("https://img.freepik.com/premium-photo/gradient-neon-line-technology-background-abstract-generative-ai-aig21_31965-133259.jpg?semt=ais_hybrid&w=740&q=80");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: fixed;
-                font-family: "Montserrat", serif;
-                scroll-behavior: smooth;
-            }
-
-            form {
-               background-color: rgba(0, 0, 0, 0.1);
-               margin: 30px;
-               width: 600px;
-               padding: 24px;
-               border-radius: 16px;
-               border: solid 5px rgba(255, 255, 255, 0.1);
-               backdrop-filter: blur(25px);
-               box-shadow: 0 0  30px 20px rgb(0, 0, 0, 0.1);
-               color: white;
-               text-align: center;
-            }
-
-            h1 {
-                font-size: 40px;
-            }
-
-            h2 {
-                font-weight: 350;
-                font-size: 20px;
-            }
-
-            input {
-                width: 45%;
-                padding: 10px;
-                margin-bottom: 15px;
-                border-radius: 20px;
-                border: solid 3px transparent;
-                background: rgb(255, 255, 255, 0.1);
-                color: white;
-            }
-
-                input:focus-visible {
-                    border: solid 3px rgb(255, 0, 170);
-                }
-
-                input::placeholder {
-                    color: rgb(255, 255, 255, 0.75);
-                }
-
-            p {
-                color: rgb(255, 0, 170);
-            }
-
-        </style>
     </head>
 
     <body>
-
-        <script>
-            // Función para determinar si un número es par o impar
-            function par_Impar() {
-                var num = parseInt(document.getElementById('num_par_impar').value);
-                var msj1;
-                if (num % 2 == 0) {
-                    msj1 = "Este número es par";
-                } else {
-                    msj1 = "Este número es impar";
-                }
-                document.getElementById('msj_parimpar').innerHTML = msj1;
-            }
-
-            // Función que devuelve si un número es par (booleano)
-            function esPar() {
-                var num = parseInt(document.getElementById('num_par').value)
-                var msj2;
-                msj2 = (num % 2 === 0) ? true : false;
-                document.getElementById('msj_espar').innerHTML = msj2;
-            }
-
-            // Función para calcular el área de un rectángulo
-            function areaRectangulo() {
-                var alto = parseFloat(document.getElementById('alto').value);
-                var ancho = parseFloat(document.getElementById('ancho').value);
-                var msj3 = "El área del rectángulo es " + (alto * ancho);
-                document.getElementById('msj_area_rec').innerHTML = msj3;
-            }
-
-            // Función combinada para calcular y verificar la letra del DNI
-            function verificarYCalcularDNI() {
-                var dni = parseInt(document.getElementById('dni').value);
-                var letra = document.getElementById('letra_dni').value.toUpperCase();
-
-                const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-                const indice = dni % 23;
-                const letraCorrecta = letras[indice];
-
-                if (letra === letraCorrecta) {
-                    document.getElementById('msj_dni').innerHTML = "La letra es correcta";
-                } else {
-                    document.getElementById('msj_dni').innerHTML = "La letra correcta es: " + letraCorrecta;
-                }
-            }
-        </script>
 
         <form>
             <h1>PRUEBAS</h1>
