@@ -5,109 +5,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Estilos Dinámico</title>
-
-        <style>
-
-            body {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                color: white;
-                background-color: black;
-            }
-
-            p {
-                font-size: 20px;
-            }
-
-            input {
-                margin: 10px 15px 20px 15px;
-            }
-
-            label {
-                margin-right: -10px;
-                font-size: 20px;
-            }
-
-            #cabecera {
-                font-size: 50px;
-            }
-
-            button {
-                margin: -10px 10px 0 10px;
-                border: solid 1px black;
-                width: 5%;
-                border-radius: 50%;
-                padding: 6px;
-                font-size: 20px;
-            }
-
-            #btn_color {
-                padding: 10px;
-                margin-top: 10px;
-                border-radius: 20px;
-                width: auto;
-            }
-
-        </style>
-
-        <script>
-
-            // cambiar el tamaño de texto
-            function tamanioTexto (t) {
-                var txt = document.getElementById('cabecera');
-                var est = window.getComputedStyle(txt, null).getPropertyValue('font-size');
-                var tamanioActual = parseFloat(est);
-
-                if (t == 1) {
-                    txt.style.fontSize = (tamanioActual+5) + "px";
-                } else {
-                    txt.style.fontSize = (tamanioActual-5) + "px";
-                }
-            }
-
-            // poner el texto en cursiva
-            function enCursiva() {
-                var campo = document.getElementById('cursiva');
-                var selec = campo.checked;
-
-                if (selec) {
-                    document.getElementById('cabecera').style.fontStyle = "italic";
-                } else {
-                    document.getElementById('cabecera').style.fontStyle = "normal";
-                }
-                
-            }
-
-            // poner marco alrededor de texto
-            function mostrarMarco() {
-                var campo = document.getElementById('marco');
-                var selec = campo.checked;
-
-                if (selec) {
-                    document.getElementById('cabecera').style.border = "1.5px solid white";
-                } else {
-                    document.getElementById('cabecera').style.border = "none"
-                }
-            }
-
-            // cambiar color de texto
-            function cambiarColor() {
-                var r = Math.ceil(Math.random()*255);
-                var g = Math.ceil(Math.random()*255);
-                var b = Math.ceil(Math.random()*255);
-
-                document.getElementById('cabecera').style.color = "rgb(" + r + "," + g + "," + b + ")";
-            }
-
-        </script>
+        <link rel="stylesheet" href="./assets/styles/estilos-style.css">
+        <script type="text/Javascript" src="./assets/js/estilos.js"></script>
 
     </head>
-
-
 
     <body>
         
@@ -115,7 +16,7 @@
 
         <p>Ajustar tamaño de texto</p>
         <button type="button" onclick="tamanioTexto(1)">+</button>
-        <button type="button" onclick="tamanioTexto(0)">-</button>
+        <button type="button" onclick="tamanioTexto(0)">&nbsp;-&nbsp;</button>
 
         <p></p>
         <label for="cursiva">Cursiva</label>

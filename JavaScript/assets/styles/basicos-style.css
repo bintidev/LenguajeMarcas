@@ -1,0 +1,56 @@
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("https://img.freepik.com/premium-photo/gradient-neon-line-technology-background-abstract-generative-ai-aig21_31965-133259.jpg?semt=ais_hybrid&w=740&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    font-family: "Montserrat", serif;
+    scroll-behavior: smooth;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 30px;
+    width: 600px;
+    padding: 24px;
+    border-radius: 16px;
+    border: solid 5px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0  30px 20px rgb(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: 350;
+    font-size: 20px;
+}
+
+input {
+    width: 45%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: solid 3px transparent;
+    background: rgb(255, 255, 255, 0.1);
+    color: white;
+}
+
+    input:focus-visible {
+        border: solid 3px rgb(255, 0, 170);
+    }
+
+    input::placeholder {
+        color: rgb(255, 255, 255, 0.75);
+    }
+
+p {
+    color: rgb(255, 0, 170);
+}
