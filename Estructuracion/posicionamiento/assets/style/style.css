@@ -1,0 +1,138 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+#cabecera {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgb(53, 53, 53), black);
+    color: white;
+    font-family: 'Fjalla One';
+    font-size: 25px;
+}
+
+    #cabecera img {
+        width: 155px;
+    }
+
+
+
+#menu {
+    float: left;
+    width: 18%;
+    height: 135.5%;
+    margin-left: -10px;
+    padding-top: 150px;
+    background-color: rgb(196, 196, 196);
+}
+
+
+    #menu ul {
+        list-style-type: none;
+    }
+
+    #menu a {
+        margin-top: 10px;
+        font-family: 'Ubuntu';
+        color: black;
+        font-size: 20px;
+    }
+
+    #menu a:hover {
+        color: rgb(247, 243, 21);
+    }
+
+
+
+#contenido {
+    float: left;
+    width: 70%;
+    margin-top: 120px;
+}
+
+
+
+.seccion {
+    margin-bottom: 70px;
+    margin-left: 30px;
+}
+
+    .img_seccion {
+        float: left;
+        width: 150px;
+        height: 180px;
+        margin-right: 15px;
+        border: solid 1.5px black;
+        padding: 5px;
+        background-color: white;
+        box-shadow: 0 0 15px rgba(36, 36, 36, 0.623);
+        z-index: 1;
+    }
+
+    .h2_seccion {
+        width: 650px;
+        font-family: 'Fira Sans';
+        font-size: 30px;
+        font-weight: 1px;
+        background-color: rgb(196, 196, 196);
+    }
+
+    .seccion p {
+        margin-top: -15px;
+        font-size: 15px;
+        font-family: 'Ubuntu';
+    }
+
+
+    
+#pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+    height: 100px;
+    text-align: center;
+    background: linear-gradient(rgb(53, 53, 53), black);
+    font-family: 'Ubuntu';
+    color: white;
+    font-size: 20px;
+}
+
+    #pie a {
+        font-style: italic;
+        color: white;
+    }
+
+    #pie a:hover {
+        color: rgb(247, 243, 21);
+    }
+
+@media (max-width: 760px) {
+    #menu {
+        width: 30.5%;
+        height: 264.3%;
+        font-size: 20px;
+    }
+
+    #cabecera {
+        font-size: medium;
+    }
+
+    #contenido {
+        width: 70%;
+    }
+
+    img {
+        width: 10%;
+    }
+}
